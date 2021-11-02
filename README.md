@@ -166,7 +166,7 @@ While it is possible to configure and register [`Channel`][c]s with [`EventLoop`
 
 For this reason, SwiftNIO ships a number of `Bootstrap` objects whose purpose is to streamline the creation of channels. Some `Bootstrap` objects also provide other functionality, such as support for Happy Eyeballs for making TCP connection attempts.
 
-Currently SwiftNIO ships with three `Bootstrap` objects in the `NIOPosix` module: [`ServerBootstrap`](https://apple.github.io/swift-nio/docs/current/NIOPosix/Classes/ServerBootstrap.html), for bootstrapping listening channels; [`ClientBootstrap`](https://apple.github.io/swift-nio/docs/current/NIOPosix/Classes/ClientBootstrap.html), for bootstrapping client TCP channels; and [`DatagramBootstrap`](https://apple.github.io/swift-nio/docs/current/NIOPosix/Classes/DatagramBootstrap.html) for bootstrapping UDP channels.
+Currently SwiftNIO ships with three `Bootstrap` objects in the `NIOPosix` module: [`ServerBootstrap`][sboot], for bootstrapping listening channels; [`ClientBootstrap`][cboot], for bootstrapping client TCP channels; and [`DatagramBootstrap`][dboot] for bootstrapping UDP channels.
 
 #### ByteBuffer
 
@@ -348,18 +348,21 @@ apt-get install -y git curl libatomic1 libxml2 netcat-openbsd lsof perl
 dnf install swift-lang /usr/bin/nc /usr/bin/lsof /usr/bin/shasum
 ```
 
-[ch]: https://apple.github.io/swift-nio/docs/current/NIOCore/Protocols/ChannelHandler.html
-[c]: https://apple.github.io/swift-nio/docs/current/NIOCore/Protocols/Channel.html
-[chc]: https://apple.github.io/swift-nio/docs/current/NIOCore/Classes/ChannelHandlerContext.html
-[ec]: https://apple.github.io/swift-nio/docs/current/NIOCore/Classes/EmbeddedChannel.html
-[el]: https://apple.github.io/swift-nio/docs/current/NIOCore/Protocols/EventLoop.html
-[eel]: https://apple.github.io/swift-nio/docs/current/NIOCore/Classes/EmbeddedEventLoop.html
-[elg]: https://apple.github.io/swift-nio/docs/current/NIOCore/Protocols/EventLoopGroup.html
-[bb]: https://apple.github.io/swift-nio/docs/current/NIOCore/Structs/ByteBuffer.html
-[elf]: https://apple.github.io/swift-nio/docs/current/NIOCore/Classes/EventLoopFuture.html
-[elp]: https://apple.github.io/swift-nio/docs/current/NIOCore/Structs/EventLoopPromise.html
-[cp]: https://apple.github.io/swift-nio/docs/current/NIOCore/Classes/ChannelPipeline.html
-[mtelg]: https://apple.github.io/swift-nio/docs/current/NIOPosix/Classes/MultiThreadedEventLoopGroup.html
+[ch]: https://apple.github.io/swift-nio/docs/current/NIO/Protocols/ChannelHandler.html
+[c]: https://apple.github.io/swift-nio/docs/current/NIO/Protocols/Channel.html
+[chc]: https://apple.github.io/swift-nio/docs/current/NIO/Classes/ChannelHandlerContext.html
+[ec]: https://apple.github.io/swift-nio/docs/current/NIO/Classes/EmbeddedChannel.html
+[el]: https://apple.github.io/swift-nio/docs/current/NIO/Protocols/EventLoop.html
+[eel]: https://apple.github.io/swift-nio/docs/current/NIO/Classes/EmbeddedEventLoop.html
+[elg]: https://apple.github.io/swift-nio/docs/current/NIO/Protocols/EventLoopGroup.html
+[bb]: https://apple.github.io/swift-nio/docs/current/NIO/Structs/ByteBuffer.html
+[elf]: https://apple.github.io/swift-nio/docs/current/NIO/Classes/EventLoopFuture.html
+[elp]: https://apple.github.io/swift-nio/docs/current/NIO/Structs/EventLoopPromise.html
+[cp]: https://apple.github.io/swift-nio/docs/current/NIO/Classes/ChannelPipeline.html
+[sboot]: https://apple.github.io/swift-nio/docs/current/NIO/Classes/ServerBootstrap.html
+[cboot]: https://apple.github.io/swift-nio/docs/current/NIO/Classes/ClientBootstrap.html
+[dboot]: https://apple.github.io/swift-nio/docs/current/NIO/Classes/DatagramBootstrap.html
+[mtelg]: https://apple.github.io/swift-nio/docs/current/NIO/Classes/MultiThreadedEventLoopGroup.html
 [pthreads]: https://en.wikipedia.org/wiki/POSIX_Threads
 [kqueue]: https://en.wikipedia.org/wiki/Kqueue
 [epoll]: https://en.wikipedia.org/wiki/Epoll
